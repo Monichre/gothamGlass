@@ -42,6 +42,10 @@
 		-webkit-text-size-adjust: none;
 	}
 
+	#header img {
+		height: inherit;
+	}
+
 /* Box Model */
 
 	*, *:before, *:after {
