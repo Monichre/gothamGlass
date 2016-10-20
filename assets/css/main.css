@@ -42,9 +42,10 @@
 		-webkit-text-size-adjust: none;
 	}
 
-	#header img {
+	/*#logo-header img {
 		height: inherit;
-	}
+		width: inherit;
+	}*/
 
 /* Box Model */
 
@@ -2828,19 +2829,6 @@
 		padding-top: 3em;
 	}
 
-	#logo {
-		position: absolute;
-		left: 1em;
-		top: 0;
-		height: 3em;
-		line-height: 3em;
-		letter-spacing: -1px;
-	}
-
-		#logo a {
-			font-size: 1.25em;
-		}
-
 	#nav {
 		position: absolute;
 		right: 0.5em;
@@ -3233,6 +3221,9 @@
 				font-size: 13pt;
 			}
 
+			#logo {
+				width: 100%;
+			}
 		/* Main */
 
 			.main.style2 .content {
@@ -3384,27 +3375,12 @@
 
 		/* Header */
 
-			#header {
-				height: 2.5em;
-				line-height: 2.5em;
-			}
+
 
 			body {
 				padding-top: 2.5em;
 			}
 
-			#logo {
-				text-align: center;
-				position: relative;
-				left: 0;
-				top: 0;
-				height: 2.5em;
-				line-height: 2.5em;
-			}
-
-				#logo a {
-					font-size: 1em;
-				}
 
 			#nav {
 				display: none;
