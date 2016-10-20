@@ -1938,7 +1938,7 @@
 			left: 0;
 			top: 0;
 			width: 100%;
-			height: 100%;
+			height: 100%!important;
 			background: url("images/overlay.png");
 		}
 
@@ -1956,6 +1956,7 @@
 		.image.fit {
 			display: block;
 			width: 100%;
+			height: 100%!important;
 		}
 
 		.image.left {
@@ -2871,7 +2872,7 @@
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/glass_1.jpeg");
+		background: url("images/overlay.png"), url("../../images/glass_interior_1.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
@@ -2881,7 +2882,7 @@
 /* One */
 
 	#one {
-		background: url("images/overlay.png"), url("../../images/glass_2.jpeg");
+		background: url("images/overlay.png"), url("../../images/glass_interior_2.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -2890,7 +2891,7 @@
 /* Two */
 
 	#two {
-		background: url("images/overlay.png"), url("../../images/glass_3.jpeg");
+		background: url("images/overlay.png"), url("../../images/glass_interior_3.jpg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
