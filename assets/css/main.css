@@ -42,10 +42,6 @@
 		-webkit-text-size-adjust: none;
 	}
 
-	/*#logo-header img {
-		height: inherit;
-		width: inherit;
-	}*/
 
 /* Box Model */
 
@@ -2860,7 +2856,8 @@
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/glass_interior_1.jpg");
+		position: relative;
+		background: url("images/overlay.png"), url("../../images/glass_1.jpeg");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
