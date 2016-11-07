@@ -2814,7 +2814,6 @@
 		left: 0;
 		top: 0;
 		width: 100%;
-		/*background: rgba(255, 255, 255, 0.3);*/
 		background: rgba(255, 255, 255, 0.3);
 		height: 3em;
 		line-height: 3em;
@@ -2859,7 +2858,7 @@
 
 	#intro {
 		position: relative;
-		background: url("images/overlay.png"), url("../../images/glass_1.jpeg");
+		background: url("images/overlay.png"), url("../../images/glass_1.png");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
