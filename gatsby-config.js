@@ -3,7 +3,7 @@ if (process.env.ENVIROMENT !== 'production') {
 }
 
 const contentfulConfig = {
-  spaceId: process.env.GATSBY_SPACE_ID_SPACE_ID,
+  spaceId: process.env.GATSBY_SPACE_ID,
   accessToken: process.env.GATSBY_ACCESS_TOKEN,
 }
 
