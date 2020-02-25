@@ -3,6 +3,22 @@ import { CmsContext } from './layout'
 import { Arrow } from './arrow'
 import { Gallery } from './gallery'
 
+import 'react-awesome-slider/dist/styles.css'
+
+import Home from '../components/home'
+import AwesomeSlider from 'react-awesome-slider'
+import 'react-awesome-slider/dist/custom-animations/cube-animation.css'
+import 'react-awesome-slider/dist/custom-animations/fall-animation.css'
+import 'react-awesome-slider/dist/custom-animations/fold-out-animation.css'
+import 'react-awesome-slider/dist/custom-animations/scale-out-animation.css'
+import 'react-awesome-slider/dist/custom-animations/open-animation.css'
+import {
+  withNavigationHandlers,
+  withNavigationContext
+} from 'react-awesome-slider/dist/navigation'
+
+const Slider = withNavigationHandlers(AwesomeSlider)
+
 export interface IntroProps {
   featuredImage: any
   content: any
@@ -10,31 +26,31 @@ export interface IntroProps {
 
 const Intro: React.SFC<IntroProps> = ({
   featuredImage: {
-    file: { url },
+    file: { url }
   },
-  content,
+  content
 }) => {
   return (
     <section
-      id="intro"
-      className="main style1 dark fullscreen"
+      id='intro'
+      className='main style1 dark fullscreen'
       style={{
         backgroundImage: `url(${url})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center'
       }}
     >
-      <div className="content container 75%">
-        <header id="logo-header">
-          <img id="logo" src="/icons/logo_white.png" alt="" />
+      <div className='content container 75%'>
+        <header id='logo-header'>
+          <img id='logo' src='/icons/logo_white.png' alt='' />
         </header>
         <p>
           Gotham delivers the highest quality glass systems with the fastest
           speed to market in the industry
         </p>
         <footer>
-          <a href="#one" className="button style2 down">
+          <a href='#one' className='button style2 down'>
             <Arrow />
           </a>
         </footer>
@@ -50,22 +66,22 @@ export interface AboutGothamProps {
 
 const AboutGotham: React.SFC<AboutGothamProps> = ({
   featuredImage: {
-    file: { url },
+    file: { url }
   },
-  content,
+  content
 }) => {
   return (
     <section
-      id="one"
-      className="main style2 right dark fullscreen"
+      id='one'
+      className='main style2 right dark fullscreen'
       style={{
         backgroundImage: `url(${url})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center'
       }}
     >
-      <div className="content box style2">
+      <div className='content box style2'>
         <header>
           <h2>About Gotham</h2>
         </header>
@@ -75,7 +91,7 @@ const AboutGotham: React.SFC<AboutGothamProps> = ({
           satisfaction.
         </p>
       </div>
-      <a href="#two" className="button style2 down anchored">
+      <a href='#two' className='button style2 down anchored'>
         <Arrow />
       </a>
     </section>
@@ -89,22 +105,22 @@ export interface WhyGothamProps {
 
 const WhyGotham: React.SFC<WhyGothamProps> = ({
   featuredImage: {
-    file: { url },
+    file: { url }
   },
-  content,
+  content
 }) => {
   return (
     <section
-      id="two"
-      className="main style2 left dark fullscreen"
+      id='two'
+      className='main style2 left dark fullscreen'
       style={{
         backgroundImage: `url(${url})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center'
       }}
     >
-      <div className="content box style2">
+      <div className='content box style2'>
         <header>
           <h2>Why Gotham</h2>
         </header>
@@ -119,7 +135,7 @@ const WhyGotham: React.SFC<WhyGothamProps> = ({
           ultimately resulting in client satisfaction.
         </p>
       </div>
-      <a href="#work" className="button style2 down anchored">
+      <a href='#work' className='button style2 down anchored'>
         <Arrow />
       </a>
     </section>
@@ -133,22 +149,22 @@ export interface ProductLinesProps {
 
 const ProductLines: React.SFC<ProductLinesProps> = ({
   featuredImage: {
-    file: { url },
+    file: { url }
   },
-  content,
+  content
 }) => {
   return (
     <section
-      id="two"
-      className="main style2 left dark fullscreen"
+      id='two'
+      className='main style2 left dark fullscreen'
       style={{
         backgroundImage: `url(${url})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'center'
       }}
     >
-      <div className="content box style2">
+      <div className='content box style2'>
         <header>
           <h2>Why Gotham</h2>
         </header>
@@ -164,7 +180,7 @@ const ProductLines: React.SFC<ProductLinesProps> = ({
           ultimately resulting in client satisfaction.
         </p>
       </div>
-      <a href="#work" className="button style2 down anchored">
+      <a href='#work' className='button style2 down anchored'>
         <Arrow />
       </a>
     </section>
@@ -175,34 +191,34 @@ export interface ContactProps {}
 
 const Contact: React.SFC<ContactProps> = () => {
   return (
-    <section id="contact" className="main style3 secondary">
-      <div className="content container">
+    <section id='contact' className='main style3 secondary'>
+      <div className='content container'>
         <header>
           <h2>Contact</h2>
         </header>
-        <div className="box container 75%">
+        <div className='box container 75%'>
           <form
-            method="post"
-            action="https://formspree.io/travis@gothamglasscorp.com"
+            method='post'
+            action='https://formspree.io/travis@gothamglasscorp.com'
           >
-            <div className="row 50%">
-              <div className="6u 12u(mobile)">
-                <input type="text" name="name" placeholder="Name" />
+            <div className='row 50%'>
+              <div className='6u 12u(mobile)'>
+                <input type='text' name='name' placeholder='Name' />
               </div>
-              <div className="6u 12u(mobile)">
-                <input type="email" name="email" placeholder="Email" />
-              </div>
-            </div>
-            <div className="row 50%">
-              <div className="12u">
-                <textarea name="message" placeholder="Message" />
+              <div className='6u 12u(mobile)'>
+                <input type='email' name='email' placeholder='Email' />
               </div>
             </div>
-            <div className="row">
-              <div className="12u">
-                <ul className="actions">
+            <div className='row 50%'>
+              <div className='12u'>
+                <textarea name='message' placeholder='Message' />
+              </div>
+            </div>
+            <div className='row'>
+              <div className='12u'>
+                <ul className='actions'>
                   <li>
-                    <input type="submit" value="Send Message" />
+                    <input type='submit' value='Send Message' />
                   </li>
                 </ul>
               </div>
@@ -228,7 +244,7 @@ const pageSectionMarkupMap = {
   },
   'Product Lines': (props: any) => {
     return <ProductLines {...props} />
-  },
+  }
 }
 
 export interface PageProps {}
@@ -240,15 +256,19 @@ const Home: React.SFC<PageProps> = props => {
   const { images } = gallery
 
   return (
-    <div>
-      {pageSections.map((section: any, index: number) => {
-        const Component = pageSectionMarkupMap[section.header]
+    <Slider
+      startupScreen={<Intro {...pageSections['Gotham Glass']} />}
+      startupDelay={275}
+      media={[
+        ...pageSections.slice(1, 3).map((section: any, index: number) => {
+          const Component = pageSectionMarkupMap[section.header]
 
-        return Component ? <Component key={index} {...section} /> : null
-      })}
-      <Gallery items={images} />
-      <Contact />
-    </div>
+          return Component ? <Component key={index} {...section} /> : null
+        }),
+        <Gallery items={images} />,
+        <Contact />
+      ]}
+    />
   )
 }
 

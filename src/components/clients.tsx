@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Layout from '../components/layout'
-import ClientPage from '../components/clientPage'
+import Layout from './layout'
+import ClientPage from './clientPage'
 import { StaticQuery, graphql } from 'gatsby'
 
 const Clients = () => (

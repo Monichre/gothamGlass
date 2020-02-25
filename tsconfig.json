@@ -14,7 +14,7 @@
     "strictFunctionTypes": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "pretty": true,
+
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "downlevelIteration": true
