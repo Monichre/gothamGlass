@@ -10,7 +10,7 @@ const Clients = () => (
         contentfulPage(name: { eq: "Clients" }) {
           name
           gallery {
-            ... on ContentfulGallery {
+            ... on ContentfulClientGallery {
               id
               galleryItems {
                 logo {
