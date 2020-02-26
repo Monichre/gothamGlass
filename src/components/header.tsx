@@ -64,28 +64,28 @@ type Props = {
 }
 
 const Header = ({ siteTitle, logo }: Props) => (
-  <header id="header">
-    <img id="nav-logo" src={logo.url} alt="" />
+  <header id='header'>
+    <img id='nav-logo' src={logo.url} alt='' />
 
-    <nav id="nav">
+    <nav id='nav'>
       <ul>
         <li>
-          <a href="#intro">Home</a>
+          <Link to='/'>Home</Link>
         </li>
         <li>
-          <a href="#one">About</a>
+          <Link to='/#one'>About</Link>
         </li>
         <li>
-          <a href="#two">Why Gotham</a>
+          <Link to='/#two'>Why Gotham</Link>
         </li>
         <li>
-          <a href="/clients">Clients</a>
+          <Link to='/clients'>Clients</Link>
         </li>
         <li>
-          <a href="#work">Gallery</a>
+          <Link to='/#work'>Gallery</Link>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <Link to='/#contact'>Contact</Link>
         </li>
       </ul>
     </nav>

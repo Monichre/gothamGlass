@@ -3,22 +3,6 @@ import { CmsContext } from './layout'
 import { Arrow } from './arrow'
 import { Gallery } from './gallery'
 
-import 'react-awesome-slider/dist/styles.css'
-
-import Home from '../components/home'
-import AwesomeSlider from 'react-awesome-slider'
-import 'react-awesome-slider/dist/custom-animations/cube-animation.css'
-import 'react-awesome-slider/dist/custom-animations/fall-animation.css'
-import 'react-awesome-slider/dist/custom-animations/fold-out-animation.css'
-import 'react-awesome-slider/dist/custom-animations/scale-out-animation.css'
-import 'react-awesome-slider/dist/custom-animations/open-animation.css'
-import {
-  withNavigationHandlers,
-  withNavigationContext
-} from 'react-awesome-slider/dist/navigation'
-
-const Slider = withNavigationHandlers(AwesomeSlider)
-
 export interface IntroProps {
   featuredImage: any
   content: any
@@ -256,19 +240,15 @@ const Home: React.SFC<PageProps> = props => {
   const { images } = gallery
 
   return (
-    <Slider
-      startupScreen={<Intro {...pageSections['Gotham Glass']} />}
-      startupDelay={275}
-      media={[
-        ...pageSections.slice(1, 3).map((section: any, index: number) => {
-          const Component = pageSectionMarkupMap[section.header]
+    <div>
+      {pageSections.map((section: any, index: number) => {
+        const Component = pageSectionMarkupMap[section.header]
 
-          return Component ? <Component key={index} {...section} /> : null
-        }),
-        <Gallery items={images} />,
-        <Contact />
-      ]}
-    />
+        return Component ? <Component key={index} {...section} /> : null
+      })}
+      <Gallery items={images} />
+      <Contact />
+    </div>
   )
 }
 

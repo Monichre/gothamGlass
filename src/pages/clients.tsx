@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Layout from './layout'
-import ClientPage from './clientPage'
+import Layout from '../components/layout'
+import ClientPage from '../components/clientPage'
 import { StaticQuery, graphql } from 'gatsby'
 
 const Clients = () => (
@@ -28,7 +28,7 @@ const Clients = () => (
     render={({ contentfulPage }) => {
       // tslint:disable-next-line:no-console
       const {
-        gallery: { galleryItems },
+        gallery: { galleryItems }
       } = contentfulPage
 
       return (

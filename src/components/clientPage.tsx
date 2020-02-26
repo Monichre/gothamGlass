@@ -2,6 +2,8 @@ import * as React from 'react'
 import { Box } from 'rebass'
 import { ClientCard } from './clientCard'
 import styled from 'styled-components'
+// @ts-ignore
+import { Slide } from 'react-reveal'
 
 export const Header: any = styled.header`
   margin: 40px auto;
@@ -37,13 +39,29 @@ const ClientPage: React.SFC<ClientPageProps> = ({ clients }) => {
         sx={{
           display: 'grid',
           gridGap: '30px',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(256px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(256px, 1fr))'
           // gridAutoRows: 32,
         }}
       >
-        {clients.map((client: Client) => (
-          <ClientCard client={client} height={rand(heights)} />
-        ))}
+        {clients.map((client: Client, index: number) =>
+          index % 2 === 0 ? (
+            <Slide left>
+              <ClientCard
+                index={index}
+                client={client}
+                height={rand(heights)}
+              />
+            </Slide>
+          ) : (
+            <Slide right>
+              <ClientCard
+                index={index}
+                client={client}
+                height={rand(heights)}
+              />
+            </Slide>
+          )
+        )}
       </Box>
     </div>
   )

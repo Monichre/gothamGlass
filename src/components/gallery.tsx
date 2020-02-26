@@ -1,5 +1,5 @@
 import * as React from 'react'
-
+import { Slide } from 'react-reveal'
 export interface GalleryProps {
   items: any[]
 }
@@ -22,40 +22,45 @@ export const Gallery: React.SFC<GalleryProps> = ({ items }: any) => {
   const galleryImages = chunk(items, 2)
 
   return (
-    <section id="work" className=" style3 primary">
-      <div className="content container">
+    <section id='work' className=' style3 primary'>
+      <div className='content container'>
         <header>
           <h2>Gallery</h2>
         </header>
 
-        <div className="container 75% gallery">
+        <div className='container 75% gallery'>
           {galleryImages
             .filter(imageChunk => imageChunk.length === 2)
-            .map(imageChunk => (
-              <div className="row 0% images">
-                <div className="6u 12u(mobile)">
-                  <a
-                    href={imageChunk[0].file.url}
-                    className="image fit from-left"
-                  >
-                    <img
-                      src={imageChunk[0].file.url}
-                      alt="Gotham Glass Interior Photo"
-                    />
-                  </a>
-                </div>
-                {imageChunk[1] && (
-                  <div className="6u 12u(mobile)">
+            .map((imageChunk, index) => (
+              <div className='row 0% images'>
+                <Slide left>
+                  <div className='6u 12u(mobile)'>
                     <a
-                      href={imageChunk[1].file.url}
-                      className="image fit from-right"
+                      href={imageChunk[0].file.url}
+                      className='image fit from-left'
                     >
                       <img
-                        src={imageChunk[1].file.url}
-                        alt="Gotham Glass Interior Photo"
+                        src={imageChunk[0].file.url}
+                        alt='Gotham Glass Interior Photo'
                       />
                     </a>
                   </div>
+                </Slide>
+
+                {imageChunk[1] && (
+                  <Slide right>
+                    <div className='6u 12u(mobile)'>
+                      <a
+                        href={imageChunk[1].file.url}
+                        className='image fit from-right'
+                      >
+                        <img
+                          src={imageChunk[1].file.url}
+                          alt='Gotham Glass Interior Photo'
+                        />
+                      </a>
+                    </div>
+                  </Slide>
                 )}
               </div>
             ))}
