@@ -1,0 +1,5806 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "page",
+        "type": "ContentType",
+        "createdAt": "2020-02-14T19:11:36.465Z",
+        "updatedAt": "2020-02-22T01:35:54.137Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2020-02-22T01:35:54.137Z",
+        "firstPublishedAt": "2020-02-14T19:11:36.666Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 6,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Page ",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "pageSections",
+          "name": "Page Sections",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "pageSectionHero"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "gallery",
+          "name": "Gallery",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "gallery",
+                "homeGallery"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "pageSectionHero",
+        "type": "ContentType",
+        "createdAt": "2020-02-14T19:12:30.450Z",
+        "updatedAt": "2020-02-16T20:48:29.598Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-02-16T20:48:29.598Z",
+        "firstPublishedAt": "2020-02-14T19:12:30.680Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Page Section",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "featuredImage",
+          "name": "Featured Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "header",
+          "name": "Header",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "RichText",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "gallery",
+        "type": "ContentType",
+        "createdAt": "2020-02-14T19:12:52.605Z",
+        "updatedAt": "2020-02-22T01:33:59.507Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2020-02-22T01:33:59.507Z",
+        "firstPublishedAt": "2020-02-14T19:12:52.817Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "displayField": null,
+      "name": "Client Gallery",
+      "description": "",
+      "fields": [
+        {
+          "id": "galleryItems",
+          "name": "Gallery Items",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "siteLogo",
+        "type": "ContentType",
+        "createdAt": "2020-02-14T19:31:17.103Z",
+        "updatedAt": "2020-02-14T19:31:17.350Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2020-02-14T19:31:17.350Z",
+        "firstPublishedAt": "2020-02-14T19:31:17.350Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "displayField": null,
+      "name": "Site Logo",
+      "description": "",
+      "fields": [
+        {
+          "id": "logoImage",
+          "name": "Logo Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "client",
+        "type": "ContentType",
+        "createdAt": "2020-02-16T00:04:22.017Z",
+        "updatedAt": "2020-02-16T00:04:22.250Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2020-02-16T00:04:22.250Z",
+        "firstPublishedAt": "2020-02-16T00:04:22.250Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Client",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "logo",
+          "name": "Logo",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "galleryItem",
+        "type": "ContentType",
+        "createdAt": "2020-02-22T01:32:03.882Z",
+        "updatedAt": "2020-02-22T01:32:04.055Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2020-02-22T01:32:04.055Z",
+        "firstPublishedAt": "2020-02-22T01:32:04.055Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "displayField": null,
+      "name": "Gallery Item",
+      "description": "",
+      "fields": [
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "homeGallery",
+        "type": "ContentType",
+        "createdAt": "2020-02-22T01:34:16.732Z",
+        "updatedAt": "2020-02-22T01:35:01.297Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-02-22T01:35:01.297Z",
+        "firstPublishedAt": "2020-02-22T01:34:16.920Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "displayField": null,
+      "name": "Home Gallery",
+      "description": "",
+      "fields": [
+        {
+          "id": "images",
+          "name": "Images",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+            ],
+            "linkType": "Asset"
+          }
+        }
+      ]
+    }
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "y8oauwbzbwg9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 12,
+        "createdAt": "2020-02-14T19:11:36.733Z",
+        "createdBy": {
+          "sys": {
+            "id": "11q5VkGBtW8mMTh9FxP19z",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-02-22T01:35:54.516Z",
+        "updatedBy": {
+          "sys": {
+            "id": "11q5VkGBtW8mMTh9FxP19z",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "page",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "pageSections",
+          "settings": {
+            "bulkEditing": false
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "settings": {
+            "helpText": "This is the specific route or URL for this page. Example https://gothamglassnyc.com/clients with \"/clients\" being the slug."
+          },
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "gallery",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "y8oauwbzbwg9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2020-02-14T19:12:30.741Z",
+        "createdBy": {
+          "sys": {
+            "id": "11q5VkGBtW8mMTh9FxP19z",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-02-16T20:48:29.946Z",
+        "updatedBy": {
+          "sys": {
+            "id": "11q5VkGBtW8mMTh9FxP19z",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "pageSectionHero",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "featuredImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "header",
+          "settings": {
+            "helpText": "This is the header or title in the little slide out text area of each page section. Example: \"About Gotham\" ."
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "y8oauwbzbwg9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 10,
+        "createdAt": "2020-02-14T19:12:52.886Z",
+        "createdBy": {
+          "sys": {
+            "id": "11q5VkGBtW8mMTh9FxP19z",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-02-22T01:33:59.851Z",
+        "updatedBy": {
+          "sys": {
+            "id": "11q5VkGBtW8mMTh9FxP19z",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "gallery",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "galleryItems",
+          "settings": {
+            "bulkEditing": false
+          },
+          "widgetId": "entryCardsEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "y8oauwbzbwg9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2020-02-14T19:31:17.419Z",
+        "createdBy": {
+          "sys": {
+            "id": "11q5VkGBtW8mMTh9FxP19z",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-02-14T19:31:17.694Z",
+        "updatedBy": {
+          "sys": {
+            "id": "11q5VkGBtW8mMTh9FxP19z",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "siteLogo",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "logoImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "y8oauwbzbwg9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2020-02-16T00:04:22.320Z",
+        "createdBy": {
+          "sys": {
+            "id": "11q5VkGBtW8mMTh9FxP19z",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-02-16T00:04:22.566Z",
+        "updatedBy": {
+          "sys": {
+            "id": "11q5VkGBtW8mMTh9FxP19z",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "client",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "logo",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "y8oauwbzbwg9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2020-02-22T01:32:04.124Z",
+        "createdBy": {
+          "sys": {
+            "id": "11q5VkGBtW8mMTh9FxP19z",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-02-22T01:32:04.385Z",
+        "updatedBy": {
+          "sys": {
+            "id": "11q5VkGBtW8mMTh9FxP19z",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "galleryItem",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "content",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "y8oauwbzbwg9",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2020-02-22T01:34:16.996Z",
+        "createdBy": {
+          "sys": {
+            "id": "11q5VkGBtW8mMTh9FxP19z",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-02-22T01:35:01.601Z",
+        "updatedBy": {
+          "sys": {
+            "id": "11q5VkGBtW8mMTh9FxP19z",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "homeGallery",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "images",
+          "widgetId": "assetLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "6wnF6hcw4DnoRx9xoGK7uI",
+        "type": "Entry",
+        "createdAt": "2020-02-14T19:13:01.268Z",
+        "updatedAt": "2020-02-22T01:56:55.417Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 30,
+        "publishedAt": "2020-02-22T01:56:55.417Z",
+        "firstPublishedAt": "2020-02-14T19:13:06.519Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 10,
+        "version": 31,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Home"
+        },
+        "pageSections": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5Gvthu0mzgPAmdwXFCywWn"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4NzTGZrARpUiF79SQNddEb"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "18ra8j8SVg6C0fL9uYwrjy"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3HaB2NPyNzcswyqE7ww1c1"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "43vJHxwXuM4iMGTygZjoaO"
+              }
+            }
+          ]
+        },
+        "gallery": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "KOGUjQOyGfw1hYNY9r2Pd"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "1D6TVef0uZh17Ygj6N7H0f",
+        "type": "Entry",
+        "createdAt": "2020-02-16T20:42:12.768Z",
+        "updatedAt": "2020-02-22T01:26:15.236Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2020-02-22T01:26:15.236Z",
+        "firstPublishedAt": "2020-02-16T20:42:26.577Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Clients"
+        },
+        "gallery": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3IN5suMjoYxGV8OHNOND4U"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "18ra8j8SVg6C0fL9uYwrjy",
+        "type": "Entry",
+        "createdAt": "2020-02-16T20:57:06.570Z",
+        "updatedAt": "2020-02-16T22:58:03.039Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 18,
+        "publishedAt": "2020-02-16T22:58:03.039Z",
+        "firstPublishedAt": "2020-02-16T21:09:47.800Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 19,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "pageSectionHero"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Why Gotham"
+        },
+        "featuredImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1S1v8laE2GGwye0QfyJq5j"
+            }
+          }
+        },
+        "header": {
+          "en-US": "Why Gotham"
+        },
+        "content": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Located in the heart of New York City, Gotham Glass leverages its location, talent and industry experience to provide ultimate client satisfaction.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "4NzTGZrARpUiF79SQNddEb",
+        "type": "Entry",
+        "createdAt": "2020-02-16T21:21:43.284Z",
+        "updatedAt": "2020-02-16T21:22:31.164Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2020-02-16T21:22:31.164Z",
+        "firstPublishedAt": "2020-02-16T21:22:31.164Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "pageSectionHero"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "About"
+        },
+        "featuredImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "18Mz4rDXKtKNb1CtMutl5U"
+            }
+          }
+        },
+        "header": {
+          "en-US": "About Gotham"
+        },
+        "content": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Located in the heart of New York City, Gotham Glass leverages its location, talent and industry experience to provide ultimate client satisfaction.",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "3HaB2NPyNzcswyqE7ww1c1",
+        "type": "Entry",
+        "createdAt": "2020-02-16T21:23:22.191Z",
+        "updatedAt": "2020-02-16T21:32:57.354Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 28,
+        "publishedAt": "2020-02-16T21:32:57.354Z",
+        "firstPublishedAt": "2020-02-16T21:32:57.354Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 29,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "pageSectionHero"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Product Lines"
+        },
+        "featuredImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "4IqimUgOCVmsOqOCJQudST"
+            }
+          }
+        },
+        "header": {
+          "en-US": "Product Lines"
+        },
+        "content": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Interior Glass Office Partitions",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "3TsG5pHYEWNxsgYzL1iSyH",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-asset-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "5uKmVwvELVgSEDNGhM16w0",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-asset-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "1cx9c5E5ZQY52DmPSi72eL",
+        "type": "Entry",
+        "createdAt": "2020-02-16T21:33:11.029Z",
+        "updatedAt": "2020-02-19T06:53:59.513Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-02-19T06:53:59.513Z",
+        "firstPublishedAt": "2020-02-16T21:33:53.122Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "gallery"
+          }
+        }
+      },
+      "fields": {
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "43vJHxwXuM4iMGTygZjoaO",
+        "type": "Entry",
+        "createdAt": "2020-02-16T21:34:16.514Z",
+        "updatedAt": "2020-02-16T21:34:27.533Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-02-16T21:34:27.533Z",
+        "firstPublishedAt": "2020-02-16T21:34:27.533Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "pageSectionHero"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Contact"
+        },
+        "header": {
+          "en-US": "Contact"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "6RSAIfc8BqT5DW0yEhpYBz",
+        "type": "Entry",
+        "createdAt": "2020-02-16T22:39:05.802Z",
+        "updatedAt": "2020-02-16T22:39:12.046Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T22:39:12.046Z",
+        "firstPublishedAt": "2020-02-16T22:39:12.046Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "siteLogo"
+          }
+        }
+      },
+      "fields": {
+        "logoImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3MzNfHWEsoWi9NUj1HmAC1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "5Gvthu0mzgPAmdwXFCywWn",
+        "type": "Entry",
+        "createdAt": "2020-02-16T22:55:52.661Z",
+        "updatedAt": "2020-02-16T22:56:28.635Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2020-02-16T22:56:28.635Z",
+        "firstPublishedAt": "2020-02-16T22:56:28.635Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "pageSectionHero"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Intro"
+        },
+        "featuredImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2ZPBqbugLaYLfdhajHca2y"
+            }
+          }
+        },
+        "header": {
+          "en-US": "Gotham Glass"
+        },
+        "content": {
+          "en-US": {
+            "nodeType": "document",
+            "data": {
+            },
+            "content": [
+              {
+                "nodeType": "paragraph",
+                "data": {
+                },
+                "content": [
+                  {
+                    "nodeType": "text",
+                    "value": "Gotham delivers the highest quality glass systems with the fastest speed to market in the industry",
+                    "marks": [
+                    ],
+                    "data": {
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "3IN5suMjoYxGV8OHNOND4U",
+        "type": "Entry",
+        "createdAt": "2020-02-22T01:12:54.248Z",
+        "updatedAt": "2020-02-22T01:15:19.138Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2020-02-22T01:15:19.138Z",
+        "firstPublishedAt": "2020-02-22T01:15:19.138Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "gallery"
+          }
+        }
+      },
+      "fields": {
+        "galleryItems": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1UEwzAsVRLzACHWjEVUhSJ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4Lpxpn7d5XVhSM4Nnymw1M"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "21FPIwdGKBnCFLA4vpwBWr"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6IjQC5cDfHp7amxzzaBMIU"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6mUUvyphYEDvVw3fdcF8rX"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5t0bQKx5Ui6I4SvMZZ3Y03"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "1UEwzAsVRLzACHWjEVUhSJ",
+        "type": "Entry",
+        "createdAt": "2020-02-22T01:13:03.713Z",
+        "updatedAt": "2020-02-22T01:13:57.342Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2020-02-22T01:13:57.342Z",
+        "firstPublishedAt": "2020-02-22T01:13:57.342Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "client"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Binyan"
+        },
+        "logo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2t8DFCyGZqxlIzRSfHTmx6"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "4Lpxpn7d5XVhSM4Nnymw1M",
+        "type": "Entry",
+        "createdAt": "2020-02-22T01:14:02.344Z",
+        "updatedAt": "2020-02-22T01:14:13.134Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-02-22T01:14:13.134Z",
+        "firstPublishedAt": "2020-02-22T01:14:13.134Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "client"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Turner"
+        },
+        "logo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "54sTcrhgakuFvPw3jHxCbw"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "21FPIwdGKBnCFLA4vpwBWr",
+        "type": "Entry",
+        "createdAt": "2020-02-22T01:14:18.152Z",
+        "updatedAt": "2020-02-22T01:14:27.259Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2020-02-22T01:14:27.259Z",
+        "firstPublishedAt": "2020-02-22T01:14:27.259Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "client"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "The World Around"
+        },
+        "logo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "fZrb22QiaQvZHR8pED0uI"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "6IjQC5cDfHp7amxzzaBMIU",
+        "type": "Entry",
+        "createdAt": "2020-02-22T01:14:32.738Z",
+        "updatedAt": "2020-02-22T01:14:43.701Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2020-02-22T01:14:43.701Z",
+        "firstPublishedAt": "2020-02-22T01:14:43.701Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "client"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "The World Around"
+        },
+        "logo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "fZrb22QiaQvZHR8pED0uI"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "6mUUvyphYEDvVw3fdcF8rX",
+        "type": "Entry",
+        "createdAt": "2020-02-22T01:14:49.556Z",
+        "updatedAt": "2020-02-22T01:14:58.658Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-02-22T01:14:58.658Z",
+        "firstPublishedAt": "2020-02-22T01:14:58.658Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "client"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Pyramid"
+        },
+        "logo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "3ChOpXmT92Su0FKswyEHLz"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "5t0bQKx5Ui6I4SvMZZ3Y03",
+        "type": "Entry",
+        "createdAt": "2020-02-22T01:15:03.686Z",
+        "updatedAt": "2020-02-22T01:15:13.436Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-02-22T01:15:13.436Z",
+        "firstPublishedAt": "2020-02-22T01:15:13.436Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "client"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "AlphaCraft"
+        },
+        "logo": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2FdqhwmxNKQuHc0gVcnJZM"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "KOGUjQOyGfw1hYNY9r2Pd",
+        "type": "Entry",
+        "createdAt": "2020-02-22T01:36:08.006Z",
+        "updatedAt": "2020-02-22T01:56:47.254Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2020-02-22T01:56:47.254Z",
+        "firstPublishedAt": "2020-02-22T01:36:25.183Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "homeGallery"
+          }
+        }
+      },
+      "fields": {
+        "images": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1S1v8laE2GGwye0QfyJq5j"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "18Mz4rDXKtKNb1CtMutl5U"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "125zddVWvfthBmnb0EiXuC"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3WK7MOENfWSRF8YCzeyTis"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "50l1iupkuqerPeWEdnTanW"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4zW7aZWvrEy3Jcf8PmvjdO"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7Jqlf6LNT04A35dG0vx4EK"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "524oEiYEJn8EZtw07pMgh8"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3RKFCUFjValWhYy92IbIKI"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6eCviUFFQlL6U88mqZNpHD"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "LSbwQC5rsGX4vIyYg1Ej8"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6oRsXFm5WlYWPPCSlZcIoh"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1pwedZloRO5hVfrGIOE4eB"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3men61VQu4xQIXl6IHGLDR"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4TUAOGp7puIuBWBrvfiiv5"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2XLyjVkkO3qpSCB60pWYI"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4Sf29LVUe1YfqnnR9hpAoz"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "73gLGzVxHGb92U2glZind6"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2AWirVrJrznc9bpXs9sNEx"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "7qrwGAY9iXAJFU315VoBNQ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "3j06Nq7dIBlMmAcmDMZoyo"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2ZdXmz1E4KGNiU0Zsl31w2"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "5X1020kcmVaAwFEbS29Tdc"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2uuTyCtHnJX8FB5QF3GHcx"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "21ZXbnyiadDIssuohQ5yee"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6aqCPTWRtPv7mHm0LKhxxr"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6r6OnFe7O7Quh7ZVb6waFH"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4NA5pGFKcCGqipsUfbvx5S"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4BYXEM0hhncmxU6DTCNjKY"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6gWwjD0mMkWVRl4KeL5XJB"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "6I5m2Gqc6QFbYsnnXfJbJh"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "1xkkiq6EsHYoSyjwSGp9iJ"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4WucTcMb7zh9NqB9t5ipEc"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "4IqimUgOCVmsOqOCJQudST"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Asset",
+                "id": "2ZPBqbugLaYLfdhajHca2y"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "2ZPBqbugLaYLfdhajHca2y",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:10:53.403Z",
+        "updatedAt": "2020-02-16T21:11:34.521Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:11:34.521Z",
+        "firstPublishedAt": "2020-02-16T21:11:34.521Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "skyscraper"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/2ZPBqbugLaYLfdhajHca2y/b4717b28ac6635f78068aa4dc5289145/skyscraper.jpeg",
+            "details": {
+              "size": 2217478,
+              "image": {
+                "width": 2744,
+                "height": 1829
+              }
+            },
+            "fileName": "skyscraper.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "B4yF7Jjid9yeIYlEgrjQU",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:10:53.409Z",
+        "updatedAt": "2020-02-19T06:52:44.972Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-02-19T06:52:44.972Z",
+        "firstPublishedAt": "2020-02-16T21:11:34.668Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "glass interior 2"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/B4yF7Jjid9yeIYlEgrjQU/6c55d05f77a6b556614a2c0a5a0254d6/glass_interior_2.jpg",
+            "details": {
+              "size": 2613267,
+              "image": {
+                "width": 3680,
+                "height": 2456
+              }
+            },
+            "fileName": "glass_interior_2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "4WucTcMb7zh9NqB9t5ipEc",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:10:53.421Z",
+        "updatedAt": "2020-02-16T21:11:34.518Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:11:34.518Z",
+        "firstPublishedAt": "2020-02-16T21:11:34.518Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "glass interior 3"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/4WucTcMb7zh9NqB9t5ipEc/8ad19d938027393f139b220c57203ed3/glass_interior_3.jpg",
+            "details": {
+              "size": 2024054,
+              "image": {
+                "width": 2524,
+                "height": 2456
+              }
+            },
+            "fileName": "glass_interior_3.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "4IqimUgOCVmsOqOCJQudST",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:10:53.423Z",
+        "updatedAt": "2020-02-16T21:11:34.518Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:11:34.518Z",
+        "firstPublishedAt": "2020-02-16T21:11:34.518Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 9"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/4IqimUgOCVmsOqOCJQudST/8d0a979fde7a071f7f1a054af7b05355/gotham_interior_9.png",
+            "details": {
+              "size": 1794331,
+              "image": {
+                "width": 1200,
+                "height": 801
+              }
+            },
+            "fileName": "gotham_interior_9.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "2uuTyCtHnJX8FB5QF3GHcx",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:41.849Z",
+        "updatedAt": "2020-02-16T21:16:07.013Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:07.013Z",
+        "firstPublishedAt": "2020-02-16T21:16:07.013Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 9"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/2uuTyCtHnJX8FB5QF3GHcx/b8cfa81d90b22cbaf91c60a4bfb9646e/gotham_interior_9.png",
+            "details": {
+              "size": 442986,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_9.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "5X1020kcmVaAwFEbS29Tdc",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:41.910Z",
+        "updatedAt": "2020-02-16T21:16:07.044Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:07.044Z",
+        "firstPublishedAt": "2020-02-16T21:16:07.044Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 2"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/5X1020kcmVaAwFEbS29Tdc/8552c9781d85d4744694c9016543cbef/gotham_interior_2.png",
+            "details": {
+              "size": 314209,
+              "image": {
+                "width": 599,
+                "height": 400
+              }
+            },
+            "fileName": "gotham_interior_2.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "7qrwGAY9iXAJFU315VoBNQ",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:41.918Z",
+        "updatedAt": "2020-02-16T21:16:07.109Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:07.109Z",
+        "firstPublishedAt": "2020-02-16T21:16:07.109Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 1"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/7qrwGAY9iXAJFU315VoBNQ/6ced3246eb45879eacb4a23f7f28c088/gotham_interior_1.png",
+            "details": {
+              "size": 439990,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_1.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "73gLGzVxHGb92U2glZind6",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:41.964Z",
+        "updatedAt": "2020-02-16T21:16:07.101Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:07.101Z",
+        "firstPublishedAt": "2020-02-16T21:16:07.101Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 8"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/73gLGzVxHGb92U2glZind6/ecac3d3a1324c2af7f1e6c4f994cc7e0/gotham_interior_8.png",
+            "details": {
+              "size": 222619,
+              "image": {
+                "width": 450,
+                "height": 300
+              }
+            },
+            "fileName": "gotham_interior_8.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "3j06Nq7dIBlMmAcmDMZoyo",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:41.966Z",
+        "updatedAt": "2020-02-16T21:16:07.009Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:07.009Z",
+        "firstPublishedAt": "2020-02-16T21:16:07.009Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 5"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/3j06Nq7dIBlMmAcmDMZoyo/bb1be86cef1f748effca4f7742140a3c/gotham_interior_5.png",
+            "details": {
+              "size": 371905,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_5.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "2AWirVrJrznc9bpXs9sNEx",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:41.985Z",
+        "updatedAt": "2020-02-16T21:16:07.106Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:07.106Z",
+        "firstPublishedAt": "2020-02-16T21:16:07.106Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 7"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/2AWirVrJrznc9bpXs9sNEx/a1514cafacef676d233801635e461472/gotham_interior_7.png",
+            "details": {
+              "size": 376490,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_7.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "4TUAOGp7puIuBWBrvfiiv5",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:42.014Z",
+        "updatedAt": "2020-02-16T21:16:08.690Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:08.690Z",
+        "firstPublishedAt": "2020-02-16T21:16:08.690Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 10"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/4TUAOGp7puIuBWBrvfiiv5/fe2bb3c8fbe2d32161c7ecf0485ade24/gotham_interior_10.png",
+            "details": {
+              "size": 307776,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_10.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "6I5m2Gqc6QFbYsnnXfJbJh",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:42.048Z",
+        "updatedAt": "2020-02-16T21:16:06.903Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:06.903Z",
+        "firstPublishedAt": "2020-02-16T21:16:06.903Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 11"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/6I5m2Gqc6QFbYsnnXfJbJh/16a5c5058ebe9e8385289ee0db9d5d87/gotham_interior_11.png",
+            "details": {
+              "size": 441217,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_11.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "6r6OnFe7O7Quh7ZVb6waFH",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:42.099Z",
+        "updatedAt": "2020-02-16T21:16:06.921Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:06.921Z",
+        "firstPublishedAt": "2020-02-16T21:16:06.921Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 13"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/6r6OnFe7O7Quh7ZVb6waFH/d0010c9e35be50a86c5110dd7de6ab60/gotham_interior_13.png",
+            "details": {
+              "size": 402908,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_13.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "2ZdXmz1E4KGNiU0Zsl31w2",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:42.102Z",
+        "updatedAt": "2020-02-16T21:16:07.047Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:07.047Z",
+        "firstPublishedAt": "2020-02-16T21:16:07.047Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 4"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/2ZdXmz1E4KGNiU0Zsl31w2/c0d8f82cb4f9b5089ff739809f5ff063/gotham_interior_4.png",
+            "details": {
+              "size": 418876,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_4.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "2XLyjVkkO3qpSCB60pWYI",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:42.103Z",
+        "updatedAt": "2020-02-16T21:16:07.938Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:07.938Z",
+        "firstPublishedAt": "2020-02-16T21:16:07.938Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 12"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/2XLyjVkkO3qpSCB60pWYI/ebc07342cfc05c5896cd70773c344e69/gotham_interior_12.png",
+            "details": {
+              "size": 370509,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_12.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "4Sf29LVUe1YfqnnR9hpAoz",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:42.113Z",
+        "updatedAt": "2020-02-16T21:16:07.086Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:07.086Z",
+        "firstPublishedAt": "2020-02-16T21:16:07.086Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 6"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/4Sf29LVUe1YfqnnR9hpAoz/c6c0ffadf345149121666a461e374a72/gotham_interior_6.png",
+            "details": {
+              "size": 407459,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_6.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "4NA5pGFKcCGqipsUfbvx5S",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:42.156Z",
+        "updatedAt": "2020-02-16T21:16:06.990Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:06.990Z",
+        "firstPublishedAt": "2020-02-16T21:16:06.990Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 14"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/4NA5pGFKcCGqipsUfbvx5S/43642a3dc604d2ee4ee7b41e1c6d3774/gotham_interior_14.png",
+            "details": {
+              "size": 377641,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_14.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "21ZXbnyiadDIssuohQ5yee",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:42.218Z",
+        "updatedAt": "2020-02-16T21:16:07.012Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:07.012Z",
+        "firstPublishedAt": "2020-02-16T21:16:07.012Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 3"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/21ZXbnyiadDIssuohQ5yee/76e516aba5f88753f6c13d5bd317c5dc/gotham_interior_3.png",
+            "details": {
+              "size": 398513,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_3.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "1xkkiq6EsHYoSyjwSGp9iJ",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:42.230Z",
+        "updatedAt": "2020-02-16T21:16:06.900Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:06.900Z",
+        "firstPublishedAt": "2020-02-16T21:16:06.900Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 15"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/1xkkiq6EsHYoSyjwSGp9iJ/44df0f50082301156db90068bb96d685/gotham_interior_15.png",
+            "details": {
+              "size": 213083,
+              "image": {
+                "width": 450,
+                "height": 300
+              }
+            },
+            "fileName": "gotham_interior_15.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "3men61VQu4xQIXl6IHGLDR",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:42.236Z",
+        "updatedAt": "2020-02-16T21:16:08.751Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:08.751Z",
+        "firstPublishedAt": "2020-02-16T21:16:08.751Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 16"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/3men61VQu4xQIXl6IHGLDR/da452cdb00c1961297a4fd4f167f999e/gotham_interior_16.png",
+            "details": {
+              "size": 781311,
+              "image": {
+                "width": 600,
+                "height": 899
+              }
+            },
+            "fileName": "gotham_interior_16.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "6aqCPTWRtPv7mHm0LKhxxr",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:42.241Z",
+        "updatedAt": "2020-02-16T21:16:06.920Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:06.920Z",
+        "firstPublishedAt": "2020-02-16T21:16:06.920Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 17"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/6aqCPTWRtPv7mHm0LKhxxr/8a71a90f6d1cbe1719c29b9796659f8f/gotham_interior_17.png",
+            "details": {
+              "size": 315761,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_17.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "4BYXEM0hhncmxU6DTCNjKY",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:42.246Z",
+        "updatedAt": "2020-02-16T21:16:06.917Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:06.917Z",
+        "firstPublishedAt": "2020-02-16T21:16:06.917Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 18"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/4BYXEM0hhncmxU6DTCNjKY/34df4f4af23ec1b0f40e62525fe62c95/gotham_interior_18.png",
+            "details": {
+              "size": 363045,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_18.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "6gWwjD0mMkWVRl4KeL5XJB",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:15:43.337Z",
+        "updatedAt": "2020-02-16T21:16:06.914Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:16:06.914Z",
+        "firstPublishedAt": "2020-02-16T21:16:06.914Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 19"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/6gWwjD0mMkWVRl4KeL5XJB/064d457afb4d1fa076967cb8286bee70/gotham_interior_19.png",
+            "details": {
+              "size": 397664,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_19.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "125zddVWvfthBmnb0EiXuC",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:16:21.981Z",
+        "updatedAt": "2020-02-16T21:17:08.582Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:17:08.582Z",
+        "firstPublishedAt": "2020-02-16T21:17:08.582Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 24"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/125zddVWvfthBmnb0EiXuC/aa03f141333ec09d37f31ee3a0d16b7b/gotham_interior_24.png",
+            "details": {
+              "size": 220432,
+              "image": {
+                "width": 450,
+                "height": 300
+              }
+            },
+            "fileName": "gotham_interior_24.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "7Jqlf6LNT04A35dG0vx4EK",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:16:21.982Z",
+        "updatedAt": "2020-02-16T21:17:06.251Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:17:06.251Z",
+        "firstPublishedAt": "2020-02-16T21:17:06.251Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 20"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/7Jqlf6LNT04A35dG0vx4EK/853d2127c6365d997b2364dca4314ff6/gotham_interior_20.png",
+            "details": {
+              "size": 337901,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_20.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "50l1iupkuqerPeWEdnTanW",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:16:21.985Z",
+        "updatedAt": "2020-02-16T21:17:06.254Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:17:06.254Z",
+        "firstPublishedAt": "2020-02-16T21:17:06.254Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 22"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/50l1iupkuqerPeWEdnTanW/d14e3459b77066a154816854b3323c01/gotham_interior_22.png",
+            "details": {
+              "size": 208878,
+              "image": {
+                "width": 450,
+                "height": 300
+              }
+            },
+            "fileName": "gotham_interior_22.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "LSbwQC5rsGX4vIyYg1Ej8",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:16:21.987Z",
+        "updatedAt": "2020-02-16T21:17:06.155Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:17:06.155Z",
+        "firstPublishedAt": "2020-02-16T21:17:06.155Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 25"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/LSbwQC5rsGX4vIyYg1Ej8/966268e3168389c2eb81845eab69c3df/gotham_interior_25.png",
+            "details": {
+              "size": 244669,
+              "image": {
+                "width": 450,
+                "height": 301
+              }
+            },
+            "fileName": "gotham_interior_25.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "4zW7aZWvrEy3Jcf8PmvjdO",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:16:21.990Z",
+        "updatedAt": "2020-02-16T21:17:06.253Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:17:06.253Z",
+        "firstPublishedAt": "2020-02-16T21:17:06.253Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 21"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/4zW7aZWvrEy3Jcf8PmvjdO/f215132bd6d783d5be133446fcbc2721/gotham_interior_21.png",
+            "details": {
+              "size": 338677,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_21.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "3WK7MOENfWSRF8YCzeyTis",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:16:21.992Z",
+        "updatedAt": "2020-02-16T21:17:06.255Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:17:06.255Z",
+        "firstPublishedAt": "2020-02-16T21:17:06.255Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 23"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/3WK7MOENfWSRF8YCzeyTis/8472d1073374f39278843c41a8b984e6/gotham_interior_23.png",
+            "details": {
+              "size": 183106,
+              "image": {
+                "width": 450,
+                "height": 300
+              }
+            },
+            "fileName": "gotham_interior_23.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "524oEiYEJn8EZtw07pMgh8",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:16:22.111Z",
+        "updatedAt": "2020-02-16T21:17:06.167Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:17:06.167Z",
+        "firstPublishedAt": "2020-02-16T21:17:06.167Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 26"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/524oEiYEJn8EZtw07pMgh8/101005f9b3c5f7ed9d17efb351d7b13e/gotham_interior_26.png",
+            "details": {
+              "size": 243153,
+              "image": {
+                "width": 450,
+                "height": 301
+              }
+            },
+            "fileName": "gotham_interior_26.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "6oRsXFm5WlYWPPCSlZcIoh",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:16:22.116Z",
+        "updatedAt": "2020-02-16T21:17:06.158Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:17:06.158Z",
+        "firstPublishedAt": "2020-02-16T21:17:06.158Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 28"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/6oRsXFm5WlYWPPCSlZcIoh/850145bfc566cb531fb00cbdc99eac60/gotham_interior_28.png",
+            "details": {
+              "size": 289490,
+              "image": {
+                "width": 500,
+                "height": 334
+              }
+            },
+            "fileName": "gotham_interior_28.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "3RKFCUFjValWhYy92IbIKI",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:16:22.121Z",
+        "updatedAt": "2020-02-16T21:17:06.142Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:17:06.142Z",
+        "firstPublishedAt": "2020-02-16T21:17:06.142Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior premier 1"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/3RKFCUFjValWhYy92IbIKI/8d858bbf51d526578eeb4f3544dadc6c/gotham_interior_premier_1.png",
+            "details": {
+              "size": 402088,
+              "image": {
+                "width": 600,
+                "height": 401
+              }
+            },
+            "fileName": "gotham_interior_premier_1.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "6eCviUFFQlL6U88mqZNpHD",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:16:22.121Z",
+        "updatedAt": "2020-02-16T21:17:06.151Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:17:06.151Z",
+        "firstPublishedAt": "2020-02-16T21:17:06.151Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 29"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/6eCviUFFQlL6U88mqZNpHD/6a2ea38f097cf85c0f93fbb9cd75537a/gotham_interior_29.png",
+            "details": {
+              "size": 261973,
+              "image": {
+                "width": 500,
+                "height": 334
+              }
+            },
+            "fileName": "gotham_interior_29.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "1pwedZloRO5hVfrGIOE4eB",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:16:22.123Z",
+        "updatedAt": "2020-02-16T21:17:06.133Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:17:06.133Z",
+        "firstPublishedAt": "2020-02-16T21:17:06.133Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gotham interior 27"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/1pwedZloRO5hVfrGIOE4eB/3912e3434c78a3bb54e6a3f2777820d0/gotham_interior_27.png",
+            "details": {
+              "size": 253264,
+              "image": {
+                "width": 500,
+                "height": 334
+              }
+            },
+            "fileName": "gotham_interior_27.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "5K0w9JDLAwmoK9iaabwKR2",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:17:43.928Z",
+        "updatedAt": "2020-02-16T21:20:29.425Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:20:29.425Z",
+        "firstPublishedAt": "2020-02-16T21:20:29.425Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "logo white"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/5K0w9JDLAwmoK9iaabwKR2/86d5c8717ff5c5779fcfcb7b43036f33/logo_white.png",
+            "details": {
+              "size": 27469,
+              "image": {
+                "width": 624,
+                "height": 63
+              }
+            },
+            "fileName": "logo_white.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "1S1v8laE2GGwye0QfyJq5j",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:17:43.935Z",
+        "updatedAt": "2020-02-16T21:20:29.466Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:20:29.466Z",
+        "firstPublishedAt": "2020-02-16T21:20:29.466Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "glass interior 3"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/1S1v8laE2GGwye0QfyJq5j/fb600f4464a33e77f0b12de8839a791a/glass_interior_3.jpg",
+            "details": {
+              "size": 2024054,
+              "image": {
+                "width": 2524,
+                "height": 2456
+              }
+            },
+            "fileName": "glass_interior_3.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "18Mz4rDXKtKNb1CtMutl5U",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:17:43.948Z",
+        "updatedAt": "2020-02-16T21:20:29.463Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:20:29.463Z",
+        "firstPublishedAt": "2020-02-16T21:20:29.463Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "glass interior 2"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/18Mz4rDXKtKNb1CtMutl5U/913f738f7840a223c41d40ca8c11deba/glass_interior_2.jpg",
+            "details": {
+              "size": 2613267,
+              "image": {
+                "width": 3680,
+                "height": 2456
+              }
+            },
+            "fileName": "glass_interior_2.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "3MzNfHWEsoWi9NUj1HmAC1",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:17:44.062Z",
+        "updatedAt": "2020-02-16T21:20:29.474Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:20:29.474Z",
+        "firstPublishedAt": "2020-02-16T21:20:29.474Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "logo green"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/3MzNfHWEsoWi9NUj1HmAC1/61440a75efe906862ad171b60cad38c2/logo_green.png",
+            "details": {
+              "size": 7433,
+              "image": {
+                "width": 189,
+                "height": 61
+              }
+            },
+            "fileName": "logo_green.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "3TsG5pHYEWNxsgYzL1iSyH",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:31:14.456Z",
+        "updatedAt": "2020-02-16T21:31:26.167Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:31:26.167Z",
+        "firstPublishedAt": "2020-02-16T21:31:26.167Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gothamProductLineThree"
+        },
+        "file": {
+          "en-US": {
+            "url": "//assets.ctfassets.net/y8oauwbzbwg9/3TsG5pHYEWNxsgYzL1iSyH/27f08941f760df8047b6ea340ba18155/gothamProductLineThree.pdf",
+            "details": {
+              "size": 598409
+            },
+            "fileName": "gothamProductLineThree.pdf",
+            "contentType": "application/pdf"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "5uKmVwvELVgSEDNGhM16w0",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:31:14.458Z",
+        "updatedAt": "2020-02-16T21:31:26.164Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:31:26.164Z",
+        "firstPublishedAt": "2020-02-16T21:31:26.164Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gothamProductLineTwo"
+        },
+        "file": {
+          "en-US": {
+            "url": "//assets.ctfassets.net/y8oauwbzbwg9/5uKmVwvELVgSEDNGhM16w0/0333f3dab017bfa2a513d227d09bed3d/gothamProductLineTwo.pdf",
+            "details": {
+              "size": 561765
+            },
+            "fileName": "gothamProductLineTwo.pdf",
+            "contentType": "application/pdf"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "kQMjnG2orSf6tCtQq7Uik",
+        "type": "Asset",
+        "createdAt": "2020-02-16T21:31:14.596Z",
+        "updatedAt": "2020-02-16T21:31:26.163Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-16T21:31:26.163Z",
+        "firstPublishedAt": "2020-02-16T21:31:26.163Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "gothamProductLineOne"
+        },
+        "file": {
+          "en-US": {
+            "url": "//assets.ctfassets.net/y8oauwbzbwg9/kQMjnG2orSf6tCtQq7Uik/2a53edcf659d77c221c5029b44c19cc6/gothamProductLineOne.pdf",
+            "details": {
+              "size": 608726
+            },
+            "fileName": "gothamProductLineOne.pdf",
+            "contentType": "application/pdf"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "2FdqhwmxNKQuHc0gVcnJZM",
+        "type": "Asset",
+        "createdAt": "2020-02-22T00:53:47.381Z",
+        "updatedAt": "2020-02-22T01:13:41.676Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-22T01:13:41.676Z",
+        "firstPublishedAt": "2020-02-22T01:13:41.676Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "alphacraft"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/2FdqhwmxNKQuHc0gVcnJZM/abfc1bbb5cb2e4be66b11a13b1c6ef72/alphacraft.png",
+            "details": {
+              "size": 23245,
+              "image": {
+                "width": 600,
+                "height": 491
+              }
+            },
+            "fileName": "alphacraft.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "2t8DFCyGZqxlIzRSfHTmx6",
+        "type": "Asset",
+        "createdAt": "2020-02-22T00:53:47.384Z",
+        "updatedAt": "2020-02-22T01:13:41.642Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-22T01:13:41.642Z",
+        "firstPublishedAt": "2020-02-22T01:13:41.642Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "binyan"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/2t8DFCyGZqxlIzRSfHTmx6/064d56041e51431ef2eb038fab384270/binyan.jpeg",
+            "details": {
+              "size": 47836,
+              "image": {
+                "width": 600,
+                "height": 400
+              }
+            },
+            "fileName": "binyan.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "3ChOpXmT92Su0FKswyEHLz",
+        "type": "Asset",
+        "createdAt": "2020-02-22T00:53:47.384Z",
+        "updatedAt": "2020-02-22T01:13:41.639Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-22T01:13:41.639Z",
+        "firstPublishedAt": "2020-02-22T01:13:41.639Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "pyramid"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/3ChOpXmT92Su0FKswyEHLz/9e7c978cb13a8eca6670ec7d645c8736/pyramid.jpg",
+            "details": {
+              "size": 89612,
+              "image": {
+                "width": 325,
+                "height": 260
+              }
+            },
+            "fileName": "pyramid.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "54sTcrhgakuFvPw3jHxCbw",
+        "type": "Asset",
+        "createdAt": "2020-02-22T00:53:47.454Z",
+        "updatedAt": "2020-02-22T01:13:41.639Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-22T01:13:41.639Z",
+        "firstPublishedAt": "2020-02-22T01:13:41.639Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "turner"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/54sTcrhgakuFvPw3jHxCbw/26f10e08681f2fb578b5257f019303f1/turner.png",
+            "details": {
+              "size": 8273,
+              "image": {
+                "width": 200,
+                "height": 200
+              }
+            },
+            "fileName": "turner.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "5RsiCsYFRSoRA3RqD98Iza",
+        "type": "Asset",
+        "createdAt": "2020-02-22T00:53:47.455Z",
+        "updatedAt": "2020-02-22T01:13:41.639Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-22T01:13:41.639Z",
+        "firstPublishedAt": "2020-02-22T01:13:41.639Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "download"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/5RsiCsYFRSoRA3RqD98Iza/9a0fe6108fbcf916a41403893a4c4146/download.jpeg",
+            "details": {
+              "size": 7168,
+              "image": {
+                "width": 225,
+                "height": 225
+              }
+            },
+            "fileName": "download.jpeg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "id": "fZrb22QiaQvZHR8pED0uI",
+        "type": "Asset",
+        "createdAt": "2020-02-22T00:53:47.461Z",
+        "updatedAt": "2020-02-22T01:13:41.635Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-02-22T01:13:41.635Z",
+        "firstPublishedAt": "2020-02-22T01:13:41.635Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "download"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/y8oauwbzbwg9/fZrb22QiaQvZHR8pED0uI/e9be8c5dd75aa5f09b9d5295e20a0029/download.png",
+            "details": {
+              "size": 2791,
+              "image": {
+                "width": 275,
+                "height": 183
+              }
+            },
+            "fileName": "download.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "3tQEcE8wrsV2Qh4N7ExnzO",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "y8oauwbzbwg9"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "createdAt": "2020-02-14T19:09:28Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "11q5VkGBtW8mMTh9FxP19z"
+          }
+        },
+        "updatedAt": "2020-02-14T19:09:28Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+  ]
+}

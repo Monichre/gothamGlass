@@ -4,12 +4,14 @@ if (process.env.ENVIROMENT !== 'production') {
 
 const contentfulConfig = {
   spaceId: process.env.GATSBY_SPACE_ID,
-  accessToken: process.env.GATSBY_ACCESS_TOKEN,
+  accessToken: process.env.GATSBY_ACCESS_TOKEN
 }
+
+console.log('contentfulConfig: ', contentfulConfig)
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Contentful TypeScript starter',
+    title: 'Gatsby Contentful TypeScript starter'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -22,8 +24,8 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
-      },
+        icon: 'src/images/gatsby-icon.png' // This path is relative to the root of the site.
+      }
     },
     'gatsby-plugin-offline',
     `gatsby-plugin-typescript`,
@@ -31,10 +33,10 @@ module.exports = {
     'gatsby-plugin-sharp',
     {
       resolve: `gatsby-source-contentful`,
-      options: contentfulConfig,
+      options: contentfulConfig
     },
     {
-      resolve: `gatsby-plugin-emotion`,
-    },
-  ],
+      resolve: `gatsby-plugin-emotion`
+    }
+  ]
 }

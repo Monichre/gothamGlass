@@ -40,6 +40,7 @@ export const Gallery: React.SFC<GalleryProps> = ({ items }: any) => {
                       className='image fit from-left'
                     >
                       <img
+                        style={{ height: '340px' }}
                         src={imageChunk[0].file.url}
                         alt='Gotham Glass Interior Photo'
                       />
@@ -55,6 +56,7 @@ export const Gallery: React.SFC<GalleryProps> = ({ items }: any) => {
                         className='image fit from-right'
                       >
                         <img
+                          style={{ height: '340px' }}
                           src={imageChunk[1].file.url}
                           alt='Gotham Glass Interior Photo'
                         />

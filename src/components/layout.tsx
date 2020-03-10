@@ -16,7 +16,7 @@ export const CmsContext: React.Context<
   T_CmsContext | any
 > = React.createContext({
   logo: {},
-  pages: [],
+  pages: []
 })
 
 type Props = {
@@ -42,7 +42,7 @@ const Layout = ({ children }: Props) => (
           }
           name
           gallery {
-            ... on ContentfulHomeGallery {
+            ... on ContentfulGallery {
               id
               images {
                 file {
@@ -68,7 +68,7 @@ const Layout = ({ children }: Props) => (
       console.log(`TCL: data`, data)
       const {
         contentfulPage: { pageSections, gallery },
-        allContentfulSiteLogo: { nodes: logoNodes },
+        allContentfulSiteLogo: { nodes: logoNodes }
       } = data
 
       const { file: logo } = logoNodes[0].logoImage
@@ -79,10 +79,10 @@ const Layout = ({ children }: Props) => (
             title={'Gotham Glass'}
             meta={[
               { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' },
+              { name: 'keywords', content: 'sample, something' }
             ]}
           >
-            <html lang="en" />
+            <html lang='en' />
           </Helmet>
           <GothamGlobalStyles />
           <Header siteTitle={'Gotham Glass'} logo={logo} />
@@ -91,7 +91,7 @@ const Layout = ({ children }: Props) => (
               margin: '0 auto',
               // maxWidth: 960,
               // padding: '0px 1.0875rem 1.45rem',
-              paddingTop: 0,
+              paddingTop: 0
             }}
           >
             <CmsContext.Provider value={{ pageSections, gallery }}>

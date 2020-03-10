@@ -10,15 +10,14 @@ const Clients = () => (
         contentfulPage(name: { eq: "Clients" }) {
           name
           gallery {
-            ... on ContentfulClientGallery {
-              id
+            ... on ContentfulGallery {
               galleryItems {
+                name
                 logo {
                   file {
                     url
                   }
                 }
-                name
               }
             }
           }

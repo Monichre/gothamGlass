@@ -85,6 +85,9 @@ const Header = ({ siteTitle, logo }: Props) => (
           <Link to='/#work'>Gallery</Link>
         </li>
         <li>
+          <Link to='/glassRepair'>Glass Repair</Link>
+        </li>
+        <li>
           <Link to='/#contact'>Contact</Link>
         </li>
       </ul>
