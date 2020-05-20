@@ -6,7 +6,7 @@ import { CmsContext } from '../HOC/AppLoadQuery'
 import { Arrow } from './arrow'
 import { Gallery } from './gallery'
 
-const Text = ({ children }: any) => <p>{children}</p>
+export const Text = ({ children }: any) => <p>{children}</p>
 const DownloadLink = ({ url, children }: any) => (
   <a style={{ color: '#98c593' }} href={url}>
     {children}

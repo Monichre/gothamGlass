@@ -84,9 +84,9 @@ const Header = ({ siteTitle, logo }: Props) => (
         <li>
           <Link to='/#work'>Gallery</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to='/glassRepair'>Glass Repair</Link>
-        </li>
+        </li> */}
         <li>
           <Link to='/#contact'>Contact</Link>
         </li>
