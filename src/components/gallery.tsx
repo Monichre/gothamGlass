@@ -22,15 +22,11 @@ export const Gallery: React.SFC<GalleryProps> = ({ items }: any) => {
   const galleryImages = chunk(items, 2)
 
   return (
-    <section id='work' className=' style3 primary'>
+    <section id='work' className='style3 primary'>
       <div className='content container'>
-        <header>
-          <h2>Gallery</h2>
-        </header>
-
         <div className='container 75% gallery'>
           {galleryImages
-            .filter(imageChunk => imageChunk.length === 2)
+            .filter((imageChunk) => imageChunk.length === 2)
             .map((imageChunk, index) => (
               <div className='row 0% images'>
                 <Slide left>

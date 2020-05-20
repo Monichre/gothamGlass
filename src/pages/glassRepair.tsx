@@ -1,11 +1,11 @@
 import * as React from 'react'
-import Layout from '../components/layout'
+import AppLoadQuery from '../HOC/AppLoadQuery'
 import { StaticQuery, graphql } from 'gatsby'
 import {
   HeroBanner,
   Paragraph,
   HeaderTwo,
-  ActionsMenu
+  ActionsMenu,
 } from '../components/heroBanner'
 import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
@@ -40,11 +40,11 @@ const GlassRepair = () => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       console.log('data: ', data)
       // tslint:disable-next-line:no-console
       const {
-        contentfulPage: { pageSections }
+        contentfulPage: { pageSections },
       } = data
 
       const hero = pageSections.find(
@@ -67,8 +67,8 @@ const GlassRepair = () => (
         renderNode: {
           [BLOCKS.PARAGRAPH]: (node: any, children: any) => (
             <Content>{children}</Content>
-          )
-        }
+          ),
+        },
       }
 
       const pContent = documentToReactComponents(
@@ -78,7 +78,7 @@ const GlassRepair = () => (
       console.log('pContent: ', pContent)
 
       return (
-        <Layout>
+        <AppLoadQuery>
           <HeroBanner backgroundImage={hero.featuredImage.file.url}>
             <div className='content'>
               <HeaderTwo>{hero.header}</HeaderTwo>
@@ -88,7 +88,7 @@ const GlassRepair = () => (
               <ScheduleAppointment />
             </ActionsMenu>
           </HeroBanner>
-        </Layout>
+        </AppLoadQuery>
       )
     }}
   />

@@ -4,6 +4,7 @@
   "version": "0.3.0",
   "author": "Filip Havrlent <filip@havrlent.com>",
   "dependencies": {
+    "@contentful/rich-text-links": "^14.0.0",
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@contentful/rich-text-types": "^14.1.0",
     "@rebass/forms": "^4.0.6",
@@ -28,6 +29,7 @@
     "react-dom": "^16.5.1",
     "react-emotion": "^9.2.12",
     "react-helmet": "^5.2.0",
+    "react-rainbow-components": "^1.15.0",
     "react-reveal": "^1.2.2",
     "react-router-dom": "^5.1.2",
     "react-use": "^13.26.1",

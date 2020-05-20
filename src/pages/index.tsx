@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
-import { HomePage } from '../components/homePage'
+import Home from '../components/home'
+import AppLoadQuery from '../HOC/AppLoadQuery'
 
 class IndexPage extends Component {
   render() {
-    return <HomePage />
+    return (
+      <AppLoadQuery>
+        <Home />
+      </AppLoadQuery>
+    )
   }
 }
 export default IndexPage

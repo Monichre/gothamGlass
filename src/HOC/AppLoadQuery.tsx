@@ -1,11 +1,10 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
+import '../components/layout.css'
+import { GothamGlobalStyles } from '../components/globalStyle'
+import Header from '../components/header'
 
-import Header from './header'
-
-import './layout.css'
-import { GothamGlobalStyles } from './globalStyle'
 type T_CmsContext = {
   pages?: object[]
   logo?: {
@@ -16,19 +15,20 @@ export const CmsContext: React.Context<
   T_CmsContext | any
 > = React.createContext({
   logo: {},
-  pages: []
+  pages: [],
 })
 
 type Props = {
   children: React.ReactNode
 }
 
-const Layout = ({ children }: Props) => (
+const AppLoadQuery = ({ children }: Props) => (
   <StaticQuery
     query={graphql`
       query AppLoad {
         contentfulPage(name: { eq: "Home" }) {
           pageSections {
+            title
             header
             content {
               content
@@ -63,12 +63,12 @@ const Layout = ({ children }: Props) => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       // tslint:disable-next-line:no-console
       console.log(`TCL: data`, data)
       const {
         contentfulPage: { pageSections, gallery },
-        allContentfulSiteLogo: { nodes: logoNodes }
+        allContentfulSiteLogo: { nodes: logoNodes },
       } = data
 
       const { file: logo } = logoNodes[0].logoImage
@@ -79,7 +79,7 @@ const Layout = ({ children }: Props) => (
             title={'Gotham Glass'}
             meta={[
               { name: 'description', content: 'Sample' },
-              { name: 'keywords', content: 'sample, something' }
+              { name: 'keywords', content: 'sample, something' },
             ]}
           >
             <html lang='en' />
@@ -89,9 +89,7 @@ const Layout = ({ children }: Props) => (
           <div
             style={{
               margin: '0 auto',
-              // maxWidth: 960,
-              // padding: '0px 1.0875rem 1.45rem',
-              paddingTop: 0
+              paddingTop: 0,
             }}
           >
             <CmsContext.Provider value={{ pageSections, gallery }}>
@@ -104,4 +102,4 @@ const Layout = ({ children }: Props) => (
   />
 )
 
-export default Layout
+export default AppLoadQuery

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Layout from '../components/layout'
+import AppLoadQuery from '../HOC/AppLoadQuery'
 import ClientPage from '../components/clientPage'
 import { StaticQuery, graphql } from 'gatsby'
 
@@ -9,31 +9,44 @@ const Clients = () => (
       query ClientPageQuery {
         contentfulPage(name: { eq: "Clients" }) {
           name
-          gallery {
-            ... on ContentfulGallery {
-              galleryItems {
-                name
-                logo {
-                  file {
-                    url
-                  }
-                }
+          pageSections {
+            title
+            header
+            content {
+              content
+              json
+            }
+            featuredImage {
+              file {
+                url
               }
             }
           }
+          # gallery {
+          #   ... on ContentfulGallery {
+          #     galleryItems {
+          #       name
+          #       logo {
+          #         file {
+          #           url
+          #         }
+          #       }
+          #     }
+          #   }
+          # }
         }
       }
     `}
     render={({ contentfulPage }) => {
+      console.log('contentfulPage: ', contentfulPage)
       // tslint:disable-next-line:no-console
-      const {
-        gallery: { galleryItems }
-      } = contentfulPage
+      const { pageSections } = contentfulPage
+      console.log('pageSections: ', pageSections)
 
       return (
-        <Layout>
-          <ClientPage clients={galleryItems} />
-        </Layout>
+        <AppLoadQuery>
+          <ClientPage pageSections={pageSections} />
+        </AppLoadQuery>
       )
     }}
   />

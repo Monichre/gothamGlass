@@ -1,19 +1,61 @@
 import React from 'react'
-import { CmsContext } from './layout'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
+import { BLOCKS, INLINES } from '@contentful/rich-text-types'
+
+import { CmsContext } from '../HOC/AppLoadQuery'
 import { Arrow } from './arrow'
 import { Gallery } from './gallery'
 
+const Text = ({ children }: any) => <p>{children}</p>
+const DownloadLink = ({ url, children }: any) => (
+  <a style={{ color: '#98c593' }} href={url}>
+    {children}
+  </a>
+)
+
+const options = {
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node: any, children: any) => <Text>{children}</Text>,
+    [INLINES.HYPERLINK]: (node: any, children: any) => {
+      const {
+        data: { uri },
+      } = node
+
+      return <a href='/'>{children}</a>
+    },
+    [BLOCKS.EMBEDDED_ASSET]: (node: any, children: any) => {
+      const {
+        data: {
+          target: {
+            fields: { file },
+          },
+        },
+      } = node
+      const { url, fileName } = file['en-US']
+
+      return <DownloadLink url={url}>{fileName}</DownloadLink>
+    },
+  },
+}
+
+// documentToReactComponents(document, options);
+// -> <
 export interface IntroProps {
   featuredImage: any
   content: any
+  header: any
 }
 
 const Intro: React.SFC<IntroProps> = ({
   featuredImage: {
-    file: { url }
+    file: { url },
   },
-  content
+  content,
+  header,
 }) => {
+  console.log('header: ', header)
+  const sectionContent = documentToReactComponents(content.json, options)
+
   return (
     <section
       id='intro'
@@ -22,17 +64,14 @@ const Intro: React.SFC<IntroProps> = ({
         backgroundImage: `url(${url})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundPosition: 'center',
       }}
     >
       <div className='content container 75%'>
         <header id='logo-header'>
           <img id='logo' src='/icons/logo_white.png' alt='' />
         </header>
-        <p>
-          Gotham delivers the highest quality glass systems with the fastest
-          speed to market in the industry
-        </p>
+        {sectionContent}
         <footer>
           <a href='#one' className='button style2 down'>
             <Arrow />
@@ -46,125 +85,40 @@ const Intro: React.SFC<IntroProps> = ({
 export interface AboutGothamProps {
   featuredImage: any
   content: any
+  header: any
+  index: any
 }
 
-const AboutGotham: React.SFC<AboutGothamProps> = ({
+const AboutSection: React.SFC<AboutGothamProps> = ({
   featuredImage: {
-    file: { url }
+    file: { url },
   },
-  content
+  header,
+  content,
+  index,
 }) => {
+  const sectionContent = documentToReactComponents(content.json, options)
+
   return (
     <section
       id='one'
-      className='main style2 right dark fullscreen'
+      className={`main style2 ${
+        index % 2 === 0 ? 'right' : 'left'
+      } dark fullscreen`}
       style={{
         backgroundImage: `url(${url})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        backgroundPosition: 'center'
+        backgroundPosition: 'center',
       }}
     >
       <div className='content box style2'>
         <header>
-          <h2>About Gotham</h2>
+          <h2>{header}</h2>
         </header>
-        <p>
-          Located in the heart of New York City, Gotham Glass leverages it's
-          location, talent and industry experience to provide ultimate client
-          satisfaction.
-        </p>
+        {sectionContent}
       </div>
       <a href='#two' className='button style2 down anchored'>
-        <Arrow />
-      </a>
-    </section>
-  )
-}
-
-export interface WhyGothamProps {
-  featuredImage: any
-  content: any
-}
-
-const WhyGotham: React.SFC<WhyGothamProps> = ({
-  featuredImage: {
-    file: { url }
-  },
-  content
-}) => {
-  return (
-    <section
-      id='two'
-      className='main style2 left dark fullscreen'
-      style={{
-        backgroundImage: `url(${url})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
-    >
-      <div className='content box style2'>
-        <header>
-          <h2>Why Gotham</h2>
-        </header>
-        <p>
-          Gotham's field team leverages their 40 years of experience to ensure
-          the highest quality installation in the industry. Local production
-          control allows Gotham to guarantee material onsite 3-4 weeks after
-          field measurements. Local fabrication also allows Gotham to
-          significantly reduce material shipping costs. These cost savings are
-          passed directly to the client. Gotham prides itself on constantly
-          pushing the design envelope with custom and complex projects,
-          ultimately resulting in client satisfaction.
-        </p>
-      </div>
-      <a href='#work' className='button style2 down anchored'>
-        <Arrow />
-      </a>
-    </section>
-  )
-}
-
-export interface ProductLinesProps {
-  featuredImage: any
-  content: any
-}
-
-const ProductLines: React.SFC<ProductLinesProps> = ({
-  featuredImage: {
-    file: { url }
-  },
-  content
-}) => {
-  return (
-    <section
-      id='two'
-      className='main style2 left dark fullscreen'
-      style={{
-        backgroundImage: `url(${url})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
-    >
-      <div className='content box style2'>
-        <header>
-          <h2>Why Gotham</h2>
-        </header>
-        <p>
-          {' '}
-          Gotham's field team leverages their 40 years of experience to ensure
-          the highest quality installation in the industry. Local production
-          control allows Gotham to guarantee material onsite 3-4 weeks after
-          field measurements. Local fabrication also allows Gotham to
-          significantly reduce material shipping costs. These cost savings are
-          passed directly to the client. Gotham prides itself on constantly
-          pushing the design envelope with custom and complex projects,
-          ultimately resulting in client satisfaction.
-        </p>
-      </div>
-      <a href='#work' className='button style2 down anchored'>
         <Arrow />
       </a>
     </section>
@@ -216,27 +170,24 @@ const Contact: React.SFC<ContactProps> = () => {
 
 const pageSectionMarkupMap = {
   'Gotham Glass': (props: any) => {
-    console.log(`TCL: props`, props)
-
     return <Intro {...props} />
   },
   'About Gotham': (props: any) => {
-    return <AboutGotham {...props} />
+    return <AboutSection {...props} />
   },
   'Why Gotham': (props: any) => {
-    return <WhyGotham {...props} />
+    return <AboutSection {...props} />
   },
   'Product Lines': (props: any) => {
-    return <ProductLines {...props} />
-  }
+    return <AboutSection {...props} />
+  },
 }
 
 export interface PageProps {}
 
-const Home: React.SFC<PageProps> = props => {
+const Home: React.SFC<PageProps> = (props) => {
   const { pageSections, gallery } = React.useContext(CmsContext)
-
-  pageSections.push({ header: 'Gallery' })
+  console.log('pageSections: ', pageSections)
   const { images } = gallery
 
   return (
@@ -244,7 +195,9 @@ const Home: React.SFC<PageProps> = props => {
       {pageSections.map((section: any, index: number) => {
         const Component = pageSectionMarkupMap[section.header]
 
-        return Component ? <Component key={index} {...section} /> : null
+        return Component ? (
+          <Component key={index} index={index} {...section} />
+        ) : null
       })}
       <Gallery items={images} />
       <Contact />
